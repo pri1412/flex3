@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+
+            body{
+                background: linear-gradient(green 450px, red 0);
+                min-height:100vh;
+            }
+
+            .ball{
+                width:50px;
+                height:50px;
+                background:yellow;
+                background: radial-gradient(at 30% 30%, blue,pink);
+                border-radius: 50%;
+                margin: 0 auto 0 25px;
+                animation: ball1 2s cubic-bezier(.755,.05,.855,.06) forwards, ball2 3s 2.05s ease forwards; 
+            }
+
+
+            @keyframes ball1{
+                60%,80%,to{
+                    transform: translateY(400px);
+                    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+                
+                }
+                70%{transform: translateY(300px);}
+                90%{transform: translateY(360px);}
+            }
+
+            @keyframes ball2{
+                from{transform: translateY(400px) rotate(0deg);}
+                to{transform: translate(400px,400px) rotate(359deg);}
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Simple Bouncing Ball </h1>
+
+        <div class="ball"> </div>
+
+    </body>
+    </html>
